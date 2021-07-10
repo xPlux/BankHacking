@@ -18,7 +18,7 @@ export function getPuzzleSvg(puzzleData){
 }
 
 // Takes multiple SVG strings and combines them to a svg
-const createSVG = (elements) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180"> ${elements.join("\n")} </svg>`
+const createSVG = (elements) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"> ${elements.join("\n")} </svg>`
 
 const createShape = (shape, color) => SHAPE_SVG[shape](color)
 
