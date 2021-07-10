@@ -10,15 +10,15 @@ export function getPuzzleSvg(puzzleData){
     const textColor = puzzleData.colors['text']
 
     const shapeSVG = createShape(puzzleData.shape, puzzleData.colors['shape'])
-    const topText = createText(puzzleData.text[0].toUpperCase(), textColor, textSize, textWeigth, 29)
-    const bottomText = createText(puzzleData.text[1].toUpperCase(), textColor, textSize, textWeigth, 69)
-    const numberText = createText(puzzleData.number, puzzleData.colors['number'], 60, 100, 50, 'Arial, Helvetica')
+    const topText = createText(puzzleData.text[0].toUpperCase(), textColor, textSize, textWeigth, 28)
+    const bottomText = createText(puzzleData.text[1].toUpperCase(), textColor, textSize, textWeigth, 70)
+    const numberText = createText(puzzleData.number, puzzleData.colors['number'], 45, 100, 50, 'Arial, Helvetica')
 
     return createSVG([shapeSVG, topText, bottomText, numberText])
 }
 
 // Takes multiple SVG strings and combines them to a svg
-const createSVG = (elements) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"> ${elements.join("\n")} </svg>`
+const createSVG = (elements) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180"> ${elements.join("\n")} </svg>`
 
 const createShape = (shape, color) => SHAPE_SVG[shape](color)
 
