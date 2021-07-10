@@ -35,7 +35,7 @@ const createText = (text, color, size, weight, y, font) => `
     <text 
         stroke="gray"
         fill="${color}"
-        stroke-width="2"
+        stroke-width="1"
         style="font-size:${size}px;" 
         font-weight="${weight}" 
         font-family="${font || 'Archivo Black'}, sans-serif";
