@@ -48,8 +48,8 @@ export function generateRandomPuzzle(){
     const colors = COLORABLE.reduce((obj, color) => {obj[color] = sample(Object.values(COLORS)); return obj}, {})
 
     // ensure shape and background don't blend
-    while(colors['text'] == colors['background'])
-        colors['text'] = sample(Object.keys(COLORS))
+    while(colors['shape'] == colors['background'])
+        colors['shape'] = sample(Object.keys(COLORS))
 
     // ensure nothing blends with shape
     while(['background', 'text', 'number'].map(i => colors[i]).includes(colors['shape']))
