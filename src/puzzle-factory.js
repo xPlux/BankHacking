@@ -6,12 +6,12 @@ const COLORABLE = ['background', 'text', 'number', 'shape']
 const COLORS = {
     'czarny' : '#000000',
     'biały' : '#FFFFFF',
-    'niebieski' : '#1991F9',
-    'czerwony' : '#8C0C00',
-    'żółty' : '#FFE335',
-    'pomarańczowy' : '#FF9900',
-    'zielony' : '#46A04F',
-    'fioletowy' : '#A43AB5',
+    'niebieski' : '#2297F5',
+    'czerwony' : '#7F0101',
+    'żółty' : '#FEEC3C',
+    'pomarańczowy' : '#FE9801',
+    'zielony' : '#4BAF4F',
+    'fioletowy' : '#9B25AE',
 }
 const QUESTIONS = {
     'kolor tła' : (d) => d.colors['background'],
