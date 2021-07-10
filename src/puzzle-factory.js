@@ -14,10 +14,10 @@ const COLORS = {
     'fioletowy' : '#9B25AE',
 }
 const QUESTIONS = {
-    'kolor tła' : (d) => d.colors['background'],
-    'kolor tekstu' : (d) => d.colors['text'],
-    'kolor liczby' : (d) => d.colors['number'],
-    'kolor kształtu' : (d) => d.colors['shape'],
+    'kolor tła' : (d) => getKeyByValue(COLORS, d.colors['background']),
+    'kolor tekstu' : (d) => getKeyByValue(COLORS, d.colors['text']),
+    'kolor liczby' : (d) => getKeyByValue(COLORS, d.colors['number']),
+    'kolor kształtu' : (d) => getKeyByValue(COLORS, d.colors['shape']),
     'kolor z tekstu' : (d) => d.text[0],
     'kształt z tekstu' : (d) => d.text[1],
     'kształt' : (d) => d.shape
@@ -30,6 +30,10 @@ class PuzzleData {
       this.text = text
       this.colors = colors
     }
+}
+
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
 }
 
 // generates a random puzzle

@@ -33,7 +33,7 @@ const SHAPE_SVG = {
 
 const createText = (text, color, size, weight, y, font) => `
     <text 
-        stroke="black" 
+        stroke="gray" 
         fill="${color}" 
         stroke-width="1" 
         style="font-size:${size}px;" 
