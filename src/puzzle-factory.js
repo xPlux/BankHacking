@@ -1,26 +1,26 @@
 import { randomInt, sample } from './helpers.js'
 
-const SHAPES = ["square", "triangle", "rectangle", "circle"]
+const SHAPES = ["kwadrat", "trójkąt", "prostokąt", "koło"]
 const COLORABLE = ['background', 'text', 'number', 'shape']
 
 const COLORS = {
-    'black' : 'black',
-    'white' : 'white', 
-    'blue' : '#1991F9',
-    'red' : '#8C0C00',
-    'yellow' : '#FFE335',
-    'orange' : '#FF9900',
-    'green' : '#46A04F',
-    'purple' : '#A43AB5',
+    'czarny' : '#000000',
+    'biały' : '#FFFFFF',
+    'niebieski' : '#1991F9',
+    'czerwony' : '#8C0C00',
+    'żółty' : '#FFE335',
+    'pomarańczowy' : '#FF9900',
+    'zielony' : '#46A04F',
+    'fioletowy' : '#A43AB5',
 }
 const QUESTIONS = {
-    'background color' : (d) => d.colors['background'],
-    'text background color' : (d) => d.colors['text'],
-    'number color' : (d) => d.colors['number'],
-    'shape color' : (d) => d.colors['shape'],
-    'color text' : (d) => d.text[0],
-    'shape text' : (d) => d.text[1],
-    'shape' : (d) => d.shape
+    'kolor tła' : (d) => d.colors['background'],
+    'kolor tekstu' : (d) => d.colors['text'],
+    'kolor liczby' : (d) => d.colors['number'],
+    'kolor kształtu' : (d) => d.colors['shape'],
+    'kolor z tekstu' : (d) => d.text[0],
+    'kształt z tekstu' : (d) => d.text[1],
+    'kształt' : (d) => d.shape
 }
 
 class PuzzleData {
@@ -41,7 +41,7 @@ export function generateRandomPuzzle(){
     const topText = sample(Object.keys(COLORS))
     const bottomText = sample(SHAPES)
 
-    const colors = COLORABLE.reduce((obj, color) => {obj[color] = sample(Object.keys(COLORS)); return obj}, {})
+    const colors = COLORABLE.reduce((obj, color) => {obj[color] = sample(Object.values(COLORS)); return obj}, {})
 
     // ensure shape and background don't blend
     while(colors['text'] == colors['background'])
@@ -71,7 +71,7 @@ export function generateQuestionAndAnswer(nums, puzzles){
     
 
     // this is confusing as hell, but works somehow
-    const question =  `${firstQuestion} (${nums[positionOne]}) AND ${secondQuestion} (${nums[positionTwo]})`
+    const question =  `${firstQuestion} (${nums[positionOne]}) i ${secondQuestion} (${nums[positionTwo]})`
     const answer = QUESTIONS[firstQuestion](puzzles[positionOne]) + ' ' + QUESTIONS[secondQuestion](puzzles[positionTwo])
 
     return [question, answer]
