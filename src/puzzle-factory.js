@@ -7,7 +7,7 @@ const COLORS = {
     'czarny' : '#000000',
     'biały' : '#FFFFFF',
     'niebieski' : '#2297F5',
-    'czerwony' : '#7F0101',
+    'czerwony' : '#DC1414',
     'żółty' : '#FEEC3C',
     'pomarańczowy' : '#FE9801',
     'zielony' : '#4BAF4F',
