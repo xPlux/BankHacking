@@ -5,13 +5,13 @@
  */
 export function getPuzzleSvg(puzzleData){
     
-    const textSize = 21
+    const textSize = 19
     const textWeigth = 'normal'
     const textColor = puzzleData.colors['text']
 
     const shapeSVG = createShape(puzzleData.shape, puzzleData.colors['shape'])
-    const topText = createText(puzzleData.text[0].toUpperCase(), textColor, textSize, textWeigth, 31)
-    const bottomText = createText(puzzleData.text[1].toUpperCase(), textColor, textSize, textWeigth, 67)
+    const topText = createText(puzzleData.text[0].toUpperCase(), textColor, textSize, textWeigth, 29)
+    const bottomText = createText(puzzleData.text[1].toUpperCase(), textColor, textSize, textWeigth, 69)
     const numberText = createText(puzzleData.number, puzzleData.colors['number'], 60, 100, 50, 'Arial, Helvetica')
 
     return createSVG([shapeSVG, topText, bottomText, numberText])
@@ -33,9 +33,9 @@ const SHAPE_SVG = {
 
 const createText = (text, color, size, weight, y, font) => `
     <text 
-        stroke="gray" 
-        fill="${color}" 
-        stroke-width="1" 
+        stroke="gray"
+        fill="${color}"
+        stroke-width="1"
         style="font-size:${size}px;" 
         font-weight="${weight}" 
         font-family="${font || 'Archivo Black'}, sans-serif";
