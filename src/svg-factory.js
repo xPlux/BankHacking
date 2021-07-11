@@ -24,9 +24,9 @@ const createShape = (shape, color) => SHAPE_SVG[shape](color)
 
 const SHAPE_SVG = {
     "kwadrat" : (c) => `<rect fill=${c} stroke="gray" stroke-width="2" width="150" height="150"/>`,
-    "trójkąt": (c) => `<polygon  fill=${c}  stroke="gray" stroke-width="2" points="0 150 75 0 150 150 0 150"/>`,
-    "prostokąt" : (c) =>`<rect y="30" fill=${c}  stroke="gray" stroke-width="2" class="shape" width="150" height="90"/>`,
-    "koło" : (c) => `<circle fill=${c}  stroke="gray" stroke-width="2" cx="75" cy="75" r="75"/>`,
+    "trojkat": (c) => `<polygon  fill=${c}  stroke="gray" stroke-width="2" points="0 150 75 0 150 150 0 150"/>`,
+    "prostokat" : (c) =>`<rect y="30" fill=${c}  stroke="gray" stroke-width="2" class="shape" width="150" height="90"/>`,
+    "kolo" : (c) => `<circle fill=${c}  stroke="gray" stroke-width="2" cx="75" cy="75" r="75"/>`,
 }
 
 
