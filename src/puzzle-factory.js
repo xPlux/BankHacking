@@ -1,15 +1,15 @@
 import { randomInt, sample } from './helpers.js'
 
-const SHAPES = ["kwadrat", "trójkąt", "prostokąt", "koło"]
+const SHAPES = ["kwadrat", "trojkat", "prostokat", "kolo"]
 const COLORABLE = ['background', 'text', 'number', 'shape']
 
 const COLORS = {
     'czarny' : '#000000',
-    'biały' : '#FFFFFF',
+    'bialy' : '#FFFFFF',
     'niebieski' : '#2297F5',
     'czerwony' : '#DC1414',
-    'żółty' : '#FEEC3C',
-    'pomarańczowy' : '#FE9801',
+    'zolty' : '#FEEC3C',
+    'pomaranczowy' : '#FE9801',
     'zielony' : '#4BAF4F',
     'fioletowy' : '#9B25AE',
 }
