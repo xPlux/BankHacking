@@ -5,7 +5,7 @@ import { getPuzzleSvg } from './svg-factory.js'
 const progressBar = $('.answer-progress-bar')
 const inputElement = $('.answer-input')
 
-let puzzleTime = 7
+let puzzleTime = 8
 let puzzleAmount = 4
 
 // handles generating puzzle and returning result
@@ -29,7 +29,7 @@ export async function doPuzzle(){
     console.log(nums)
     await displayNumbers(nums)
 
-    const metronome = (puzzleTime == 7) ? playSound('assets/metronome.mp3') : playSound('assets/long-metronome.mp3')
+    const metronome = (puzzleTime == 8) ? playSound('assets/metronome.mp3') : playSound('assets/long-metronome.mp3')
 
     // clear and focus input window
     $('.answer-section').classList.remove('hidden')
