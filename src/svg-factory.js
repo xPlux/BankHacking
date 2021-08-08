@@ -5,7 +5,7 @@
  */
 export function getPuzzleSvg(puzzleData){
     
-    const textSize = 15
+    const textSize = 19
     const textWeigth = 'normal'
     const textColor = puzzleData.colors['text']
 
