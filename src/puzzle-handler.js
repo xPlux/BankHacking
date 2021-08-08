@@ -50,7 +50,11 @@ export async function doPuzzle(){
     squares.forEach((square, i)  => square.innerHTML =  getPuzzleSvg(puzzles[i]))
 
     // generate and display question
-    const [question, answer] = generateQuestionAndAnswer(nums, puzzles) 
+    let [question, answer] = generateQuestionAndAnswer(nums, puzzles)
+    while (answer.includes('undefined') || answer.includes(undefined)) {
+        console.error('undefined found while generating set. Trying with new one');
+        [question, answer] = generateQuestionAndAnswer(nums, puzzles)
+    }
     $('.answer-question').textContent = question.toUpperCase()
     
     // for learning purposes
