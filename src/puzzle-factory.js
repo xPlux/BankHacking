@@ -20,7 +20,7 @@ const QUESTIONS = {
     'kolor ksztaltu' : (d) => getKeyByValue(COLORS, d.colors['shape']),
     'napisany kolor' : (d) => d.text[0],
     'napisany ksztalt' : (d) => d.text[1],
-    'ksztalt' : (d) => d.shape
+    'ksztalt pod tekstem' : (d) => d.shape
 }
 
 class PuzzleData {
