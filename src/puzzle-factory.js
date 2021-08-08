@@ -6,21 +6,21 @@ const COLORABLE = ['background', 'text', 'number', 'shape']
 const COLORS = {
     'czarny' : '#000000',
     'bialy' : '#FFFFFF',
-    'niebieski' : '#2297F5',
-    'czerwony' : '#DC1414',
-    'zolty' : '#FEEC3C',
-    'pomaranczowy' : '#FE9801',
-    'zielony' : '#4BAF4F',
-    'fioletowy' : '#9B25AE',
+    'niebieski' : '#00007f',
+    'czerwony' : '#7f0000',
+    'zolty' : '#7d7d22',
+    'pomaranczowy' : '#7f5300',
+    'zielony' : '#004000',
+    'fioletowy' : '#40003f',
 }
 const QUESTIONS = {
-    'kolor tła' : (d) => getKeyByValue(COLORS, d.colors['background']),
+    'kolor tla' : (d) => getKeyByValue(COLORS, d.colors['background']),
     'kolor tekstu' : (d) => getKeyByValue(COLORS, d.colors['text']),
-    'kolor liczby' : (d) => getKeyByValue(COLORS, d.colors['number']),
-    'kolor kształtu' : (d) => getKeyByValue(COLORS, d.colors['shape']),
-    'kolor z tekstu' : (d) => d.text[0],
-    'kształt z tekstu' : (d) => d.text[1],
-    'kształt' : (d) => d.shape
+    'kolor numeru' : (d) => getKeyByValue(COLORS, d.colors['number']),
+    'kolor ksztaltu' : (d) => getKeyByValue(COLORS, d.colors['shape']),
+    'napisany kolor' : (d) => d.text[0],
+    'napisany ksztalt' : (d) => d.text[1],
+    'ksztalt' : (d) => d.shape
 }
 
 class PuzzleData {
