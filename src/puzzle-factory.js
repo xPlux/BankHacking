@@ -6,12 +6,12 @@ const COLORABLE = ['background', 'text', 'number', 'shape']
 const COLORS = {
     'czarny' : '#000000',
     'bialy' : '#FFFFFF',
-    'niebieski' : '#00007f',
-    'czerwony' : '#7f0000',
-    'zolty' : '#7d7d22',
-    'pomaranczowy' : '#7f5300',
-    'zielony' : '#004000',
-    'fioletowy' : '#40003f',
+    'niebieski' : '#0000ff',
+    'czerwony' : '#ff0000',
+    'zolty' : '#ffff00',
+    'pomaranczowy' : '#ffa500',
+    'zielony' : '#ffff00',
+    'fioletowy' : '#800080',
 }
 const QUESTIONS = {
     'kolor tla' : (d) => getKeyByValue(COLORS, d.colors['background']),
