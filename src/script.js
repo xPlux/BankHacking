@@ -41,7 +41,7 @@ async function start(){
     $('#text-container').classList.remove('hidden')
     
     // display result
-    setInformationText((result) ? 'No i łatwo, jedziesz z tym! Serduszka dla Kamilka czacik! 💜💜💜💜💜💜💜💜💜💜' : "The system didn't accept your answers")
+    setInformationText((result) ? 'the system has been bypassed. ✅' : "The system didn't accept your answers ⛔️")
     if(!result) $('.spy-icon').src = 'assets/failed.png'
 
     $('#answer-reveal').textContent = answer
