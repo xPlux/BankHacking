@@ -5,8 +5,8 @@
  */
 export function getPuzzleSvg(puzzleData){
     
-    const textSize = 19
-    const textWeigth = 'normal'
+    const textSize = 17
+    const textWeigth = 'light'
     const textColor = puzzleData.colors['text']
 
     const shapeSVG = createShape(puzzleData.shape, puzzleData.colors['shape'])
@@ -31,7 +31,7 @@ const SHAPE_SVG = {
 
 const createText = (text, color, size, weight, y, font) => `
     <text 
-        stroke="gray"
+        stroke="white"
         fill="${color}"
         stroke-width="1"
         style="font-size:${size}px;" 

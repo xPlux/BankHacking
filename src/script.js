@@ -13,12 +13,12 @@ async function start(){
     const dialing = playSound('assets/dialing.mp3', 0.1)
 
     // mock loading screen
-    setInformationText('ESTABLISHING CONNECTION')
-    await delay(0.8)
-    setInformationText('DOING SOME HACKERMANS STUFF...')
-    await delay(1)
-    setInformationText('ACCESS CODE FLAGGED; REQUIRES HUMAN CAPTCHA INPUT..')
-    await delay(0.8)
+    // setInformationText('ESTABLISHING CONNECTION')
+    // await delay(0.8)
+    // setInformationText('DOING SOME HACKERMANS STUFF...')
+    // await delay(1)
+    // setInformationText('ACCESS CODE FLAGGED; REQUIRES HUMAN CAPTCHA INPUT..')
+    // await delay(0.8)
 
     // hide text and show squares
     $('#text-container').classList.toggle('hidden')
@@ -41,7 +41,7 @@ async function start(){
     $('#text-container').classList.remove('hidden')
     
     // display result
-    setInformationText((result) ? 'the system has been bypassed. ✅' : "The system didn't accept your answers ⛔️")
+    setInformationText((result) ? 'the system has been bypassed. ✅' : "system nie zaakceptowal odpowiedzi")
     if(!result) $('.spy-icon').src = 'assets/failed.png'
 
     $('#answer-reveal').textContent = answer
